@@ -60,7 +60,7 @@ public class Main {
             Collections.sort(products,new PoductsIdComparator());
         }
 
-        
+
         System.out.println();
         System.out.println(products);
     }
