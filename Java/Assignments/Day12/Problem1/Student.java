@@ -11,6 +11,15 @@ public class Student {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "roll=" + roll +
+                ", marks=" + marks +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public int getRoll() {
         return roll;
     }
