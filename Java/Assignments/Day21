@@ -1,0 +1,30 @@
+What is normalization and why it is needed?
+
+Normalization is organizing the data in most efficient way in RDBMS. We need normalization so that we did not encounter any anomaly.
+
+Explain the 3NF with an example.
+
+Table is said to be in 3NF if-
+  *Table is in 2NF
+  *There is no transitive dependency between non-prime attribute on any super Key.
+  
+  Example-
+  
+  EmpId|EmpName|EmpZip|EmpState|EmpCity
+    1  |Name1 | 123456| UP     |Rampur
+    2  |Name2 | 235672| MP     |Bhopal
+    3  |Name3 | 456831| UP     |Moradabad
+    4  |Name4 | 456721| AP     |Telangana
+    5  |Name1 | 123456| UP     |Rampur
+    
+    SuperKeys-{EmpId},{EmpId,EmpName},{EmpId,EmpZip},{EmpId,EmpZip,EmpState}....so on
+    
+    Candidate Key-{EmpId}
+    
+    Prime Attributes-EmpId
+    Non-Prime Attributes-EmpName,EmpZip,EmpState,EmpCity
+    
+    Here,EmpZip-->EmpCity and EmpId-->EmpZip
+    So we can conclude,EmpId-->EmpState(Transitive Dependency of Non-Prime Attribute on Super Key)
+    So,This violates our above condition and the table here is not in 3NF.
+    
